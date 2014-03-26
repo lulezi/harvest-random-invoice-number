@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Harvest Random Invoice/Estimate Number",
+  "description": "Replaces the invoice/estimate number suggested by Harvest with a randomly generated 4-digit hexadecimal string.",
+  "version": "0.1.0",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.harvestapp.com/invoices/new*",
+        "https://*.harvestapp.com/estimates/new*"
+      ],
+      "js": ["js.js"]
+    }
+  ]
+}
